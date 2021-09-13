@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class="post">
+        {% if post.data_publikacji %}
+            <div class="date">
+                {{ post.data_publikacji }}
+            </div>
+        {% endif %}
+        <h2>{{ post.tytul }}</h2>
+        <p>{{ post.tekst|linebreaksbr }}</p>
+        <h6>Dodał: {{ post.autor }}</h6>
+    </div>
+{% endblock %}
